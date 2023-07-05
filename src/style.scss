@@ -3,6 +3,8 @@
   src: url("/src/assets/fonts/ZilapOrionUrbanPersonalUse.ttf");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:wght@400;500;600&display=swap');
+
 /*variables*/
 $header-height: 3rem;
 
@@ -15,7 +17,7 @@ $secondary-color: #993bd9;
 
 /*font & typography */
 $title-font: "ZilapOrion", sans-serif;
-$body-font: "Poppins", monospace;
+$body-font: "Montserrat", monospace;
 
 $big-font-size: 3.5rem;
 $h1-font-size: 2.25rem;
@@ -145,7 +147,7 @@ img {
 
 /*layout*/
 .container {
-  max-width: 968px;
+  max-width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -153,6 +155,15 @@ img {
 .grid {
   display: grid;
   gap: 1.5rem;
+}
+
+/*sections*/
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-fixed;
 }
 
 /*buttons*/

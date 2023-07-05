@@ -3,21 +3,25 @@ import { instagram, soundcloud, twitter, youtube } from "../assets";
 export const navLinks = [
     {
         id: "home",
+        icon: "uil uil-estate",
         title: "Home",
         page: false
     },
     {
         id: "about",
+        icon: "uil uil-user",
         title: "About",
         page: false
     },
     {
-        id: "latest_drops",
-        title: "Latest drops",
+        id: "realeases",
+        icon: "uil uil-rocket",
+        title: "Realeases",
         page: false
     },
     {
         id: "contact",
+        icon: "uil uil-envelope",
         title: "Contact",
         page: false
       },

@@ -1,11 +1,20 @@
 <template>
-    <header></header>
-    <main></main>
-    <footer></footer>
+  <header class="header">
+    <Nav></Nav>
+  </header>
+  <main></main>
+  <footer></footer>
 </template>
 
-<script setup>
+<script>
+import Nav from "./components/nav/Nav.vue";
+
+export default {
+  name: "app",
+  components: {
+    Nav
+  }
+};
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
