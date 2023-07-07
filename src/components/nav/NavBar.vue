@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav container">
+  <nav :class="['navBar container', scrolled ? 'bg-nav' : 'bg-non-nav']">
     <a href="#home" class="nav-logo" @click.prevent="">
       <img :src="whiteLogo" alt="logo" />
     </a>
@@ -9,7 +9,7 @@
         <img :src="whiteLogo" alt="logo" />
       </a>
       <li v-for="nav in navLinks" :key="nav.id">
-        <a :href="'#' + nav.id" class="nav-link" @click.prevent=""><i :class="nav.icon "></i>{{ nav.title }}</a>
+        <a :href="'#' + nav.id" class="nav-link" @click.prevent="scrollToSection(nav.id), showMenu = !showMenu"><i :class="nav.icon "></i>{{ nav.title }}</a>
       </li>
     </ul>
 
@@ -29,22 +29,46 @@ import { whiteLogo } from "../../assets";
 import { navLinks } from "../../constants";
 
 export default {
-  name: "nav",
+  name: "navBar",
   data: function () {
     return {
       whiteLogo: whiteLogo,
       navLinks: navLinks,
       showMenu: false,
+      scrolled: false
     };
   },
-  methods: {},
+  mounted(){
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        this.scrolled=true;
+      } else {
+        this.scrolled=false;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  },
+  methods: {
+    scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 @import "../../style.scss";
 
-.nav {
+.navBar {
   height: calc(#{$header-height} + 1rem);
   display: flex;
   align-items: center;
@@ -83,7 +107,6 @@ export default {
 
   &:hover {
     color: $secondary-color;
-    transform: scale(1.1);
   }
 
   i{
@@ -137,6 +160,26 @@ export default {
   }
 }
 
+.bg-nav {
+  background: #00040fd9;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.bg-non-nav {
+  background: transparent;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+/* breakpoints*/
+/*medium devices*/
 @media screen and (max-width: 768px) {
   .nav-list {
     display: flex;
@@ -179,6 +222,10 @@ export default {
 
   .burger {
     display: block;
+  }
+
+  .nav-logo{
+    left: 0;
   }
 
   .nav-logo2 {

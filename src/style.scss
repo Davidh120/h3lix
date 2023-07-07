@@ -67,7 +67,9 @@ $z-modal: 1000;
 }
 
 body {
-  background-color: $body-color;
+  background: $body-color;
+  background: linear-gradient(126deg, rgba(56,40,89,1) -20%, rgba(0,0,0,1) 50%, rgba(62,22,89,1) 120%);
+  background-size: cover;
   color: $text-color;
 }
 
@@ -125,6 +127,8 @@ img {
 
 /*reusable css classes*/
 .section {
+  width: 100%;
+  max-height: 100vh;
   height: 100vh;
   padding: 6.5rem 0 2rem;
 }

@@ -1,4 +1,4 @@
-import { instagram, soundcloud, twitter, youtube } from "../assets";
+import { instagram, soundcloud, twitter, youtube, tiktok } from "../assets";
 
 export const navLinks = [
     {

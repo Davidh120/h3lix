@@ -1,18 +1,23 @@
 <template>
   <header class="header">
-    <Nav></Nav>
+    <NavBar></NavBar>
   </header>
-  <main></main>
+  <main>
+    <Home></Home>
+    <About></About>
+  </main>
   <footer></footer>
 </template>
 
 <script>
-import Nav from "./components/nav/Nav.vue";
+import { NavBar, Home, About } from './components'
 
 export default {
   name: "app",
   components: {
-    Nav
+    NavBar,
+    Home,
+    About
   }
 };
 </script>

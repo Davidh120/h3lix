@@ -1,7 +1,17 @@
 <template>
+    <section class="about section" id="about">
+        <div class="container">
+        </div>
+    </section>
 </template>
 
-<script setup>
+<script>
+export default{
+    name: "about",
+    data: function(){
+        return {}
+    }
+}
 </script>
 
 <style lang="scss">
