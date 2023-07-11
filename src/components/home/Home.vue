@@ -110,6 +110,7 @@ export default {
   row-gap: $mb-2-5;
   align-items: center;
   justify-content: center;
+  margin-right: 10rem;
 
   .icon {
     z-index: 10;
@@ -141,6 +142,7 @@ export default {
   border-radius: 10px;
   padding: 1rem;
   object-fit: contain;
+  text-align: center;
 }
 
 .deco {
@@ -148,6 +150,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 10rem;
 
   .stick {
     background-color: #fff;
@@ -169,6 +172,14 @@ export default {
 @media screen and (max-width: 992px) {
   .title {
     font-size: 8rem;
+  }
+
+  .home-social{
+    margin-right: 0;
+  }
+
+  .deco{
+    margin-left: 0;
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['navBar container', scrolled ? 'bg-nav' : 'bg-non-nav']">
+  <nav :class="['navBar', scrolled ? 'bg-nav' : 'bg-non-nav']">
     <a href="#home" class="nav-logo" @click.prevent="">
       <img :src="whiteLogo" alt="logo" />
     </a>
