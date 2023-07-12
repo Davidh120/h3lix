@@ -32,8 +32,8 @@ export default {
   name: "navBar",
   data: function () {
     return {
-      whiteLogo: whiteLogo,
-      navLinks: navLinks,
+      whiteLogo,
+      navLinks,
       showMenu: false,
       scrolled: false
     };
@@ -65,7 +65,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../style.scss";
 
 .navBar {

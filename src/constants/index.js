@@ -1,4 +1,4 @@
-import { instagram, soundcloud, twitter, youtube, tiktok } from "../assets";
+import { instagram, soundcloud, twitter, youtube, tiktok, likethis, techouseset, brave } from "../assets";
 
 export const navLinks = [
     {
@@ -14,9 +14,9 @@ export const navLinks = [
         page: false
     },
     {
-        id: "realeases",
+        id: "releases",
         icon: "uil uil-rocket",
-        title: "Realeases",
+        title: "Releases",
         page: false
     },
     {
@@ -49,3 +49,24 @@ export const socialMedia = [
         link: "https://www.youtube.com/@h3lixmusic",
     },
 ];
+
+export const releases = [
+    {
+        id: 1,
+        image: likethis,
+        name: "H3LIX - Like This",
+        link: ""
+    },
+    {
+        id: 2,
+        image: techouseset,
+        name: "H3LIX - Tech House Mix",
+        link: "https://www.youtube.com/watch?v=qlkD_ug27o4&t=253s&ab_channel=H3LIXMUSIC"
+    },
+    {
+        id: 3,
+        image: brave,
+        name: "Sikdope X Dux N Bass - Brave (H3LIX-Bootleg)",
+        link: "https://www.youtube.com/watch?v=i6NY7p_SoqU&ab_channel=H3LIXMUSIC"
+    },
+]

@@ -17,9 +17,9 @@
         <div class="main">
           <h1 class="title section-title">HELIX</h1>
           <img :src="h3lix3" alt="h3lix" class="portrait" />
-          <div class="phrase">
+          <!-- <div class="phrase">
             <p>"Music transcends dimensions, unlocking limitless realms of expression"</p>
-          </div>
+          </div> -->
         </div>
         <div class="deco">
           <span class="stick"></span>
@@ -39,14 +39,14 @@ export default {
   name: "home",
   data: function () {
     return {
-      h3lix3: h3lix3,
-      socialMedia: socialMedia,
+      h3lix3,
+      socialMedia,
     };
   },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../style.scss";
 
 .home {
@@ -93,9 +93,10 @@ export default {
 
 .main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-height: 100%;
+  width: 100%;
 }
 
 .title {
@@ -126,18 +127,13 @@ export default {
   z-index: 0;
   max-width: 100%;
   max-height: 100%;
-  width: 32rem;
-  object-fit: contain;
+  width: 30rem;
   border-radius: 36%;
   filter: contrast(110%);
   filter: drop-shadow(0 0 10px #993bd9);
 }
 
 .phrase{
-  position: absolute;
-  left: 50%;
-  top: 85%;
-  transform: translateX(-50%);
   background-color: #4040406d;
   border-radius: 10px;
   padding: 1rem;
@@ -168,6 +164,17 @@ export default {
 }
 
 /* breakpoints*/
+/*extra large*/
+@media only screen and (max-width: 1200px) {
+  .home-social{
+    margin-right: 2rem;
+  }
+
+  .deco{
+    margin-left: 2rem;
+  }
+
+}
 /*large devices*/
 @media screen and (max-width: 992px) {
   .title {

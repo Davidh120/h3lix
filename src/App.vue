@@ -5,19 +5,21 @@
   <main>
     <Home></Home>
     <About></About>
+    <Releases></Releases>
   </main>
   <footer></footer>
 </template>
 
 <script>
-import { NavBar, Home, About } from './components'
+import { NavBar, Home, About, Releases } from './components'
 
 export default {
   name: "app",
   components: {
     NavBar,
     Home,
-    About
+    About,
+    Releases
   }
 };
 </script>
