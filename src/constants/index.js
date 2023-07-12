@@ -70,3 +70,14 @@ export const releases = [
         link: "https://www.youtube.com/watch?v=i6NY7p_SoqU&ab_channel=H3LIXMUSIC"
     },
 ]
+
+export const videos = [
+    {
+        id: 1,
+        link: "https://www.youtube.com/watch?v=qlkD_ug27o4&t=253s&ab_channel=H3LIXMUSIC"
+    },
+    {
+        id: 2,
+        link: ""
+    }
+]

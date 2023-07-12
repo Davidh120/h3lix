@@ -1,17 +1,17 @@
 <template>
   <section class="releases section" id="releases">
-    <h2 class="section-title">Latest Drops</h2>
+    <h2 class="section-title">LATEST DROPS</h2>
     <div class="releases-container container">
       <div class="content grid">
-        <div class="realease" v-for="realease in releases" :key="realease.id">
-          <a :href="realease.link" target="_blank">
+        <div class="release" v-for="release in releases" :key="release.id">
+          <a :href="release.link" target="_blank">
             <img
-              :src="realease.image"
-              :alt="realease.name"
-              class="realease-img"
+              :src="release.image"
+              :alt="release.name"
+              class="release-img"
             />
           </a>
-          <h3>{{ realease.name }}</h3>
+          <h3>{{ release.name }}</h3>
         </div>
       </div>
       <a
@@ -52,7 +52,7 @@ export default {
     font-size: $small-font-size;
   }
 
-  .realease-img {
+  .release-img {
     width: 20rem;
     height: 20rem;
   }

@@ -6,12 +6,13 @@
     <Home></Home>
     <About></About>
     <Releases></Releases>
+    <Videos></Videos>
   </main>
   <footer></footer>
 </template>
 
 <script>
-import { NavBar, Home, About, Releases } from './components'
+import { NavBar, Home, About, Releases, Videos } from './components'
 
 export default {
   name: "app",
@@ -19,7 +20,8 @@ export default {
     NavBar,
     Home,
     About,
-    Releases
+    Releases,
+    Videos
   }
 };
 </script>
