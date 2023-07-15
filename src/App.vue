@@ -7,12 +7,14 @@
     <About></About>
     <Releases></Releases>
     <Videos></Videos>
+    <Subscribe></Subscribe>
+    <Contact></Contact>
   </main>
   <footer></footer>
 </template>
 
 <script>
-import { NavBar, Home, About, Releases, Videos } from './components'
+import { NavBar, Home, About, Releases, Videos, Subscribe, Contact } from './components'
 
 export default {
   name: "app",
@@ -21,7 +23,9 @@ export default {
     Home,
     About,
     Releases,
-    Videos
+    Videos,
+    Subscribe,
+    Contact
   }
 };
 </script>

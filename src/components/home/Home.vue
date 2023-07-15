@@ -16,7 +16,7 @@
         </div>
         <div class="main">
           <h1 class="title section-title">HELIX</h1>
-          <img :src="h3lix3" alt="h3lix" class="portrait" />
+          <img :src="h3lix1" alt="h3lix" class="portrait" />
           <!-- <div class="phrase">
             <p>"Music transcends dimensions, unlocking limitless realms of expression"</p>
           </div> -->
@@ -32,14 +32,14 @@
 </template>
 
 <script>
-import { h3lix3 } from "../../assets";
+import { h3lix1 } from "../../assets";
 import { socialMedia } from "../../constants";
 
 export default {
   name: "home",
   data: function () {
     return {
-      h3lix3,
+      h3lix1,
       socialMedia,
     };
   },

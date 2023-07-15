@@ -74,7 +74,7 @@ export default {
   display: flex;
   justify-content: center;
   width: 25rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 
   @media (max-width: 576px) {
     width: 100%;

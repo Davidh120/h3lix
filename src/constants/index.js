@@ -74,10 +74,10 @@ export const releases = [
 export const videos = [
     {
         id: 1,
-        link: "https://www.youtube.com/watch?v=qlkD_ug27o4&t=253s&ab_channel=H3LIXMUSIC"
+        iframe: '<iframe width="560" height="315" src="https://www.youtube.com/embed/qlkD_ug27o4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"allowfullscreen></iframe>'
     },
     {
         id: 2,
-        link: ""
+        iframe: '<iframe width="560" height="315" src="https://www.youtube.com/embed/i6NY7p_SoqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
     }
 ]

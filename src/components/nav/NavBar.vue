@@ -98,7 +98,7 @@ export default {
 .nav-link {
   font-size: $normal-font-size;
   color: $title-color;
-  font-weight: $font-normal;
+  font-weight: map-get($font-weights , $key: normal);
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
