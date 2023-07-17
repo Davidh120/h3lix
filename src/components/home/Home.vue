@@ -8,7 +8,7 @@
             :href="social.link"
             :key="social.id"
             :id="social.id"
-            className="home-social-icon"
+            class="home-social-icon"
             target="_blank"
           >
             <img :src="social.icon" :alt="social.link" class="icon"/>

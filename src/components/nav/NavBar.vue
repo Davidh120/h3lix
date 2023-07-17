@@ -1,11 +1,11 @@
 <template>
   <nav :class="['navBar', scrolled ? 'bg-nav' : 'bg-non-nav']">
-    <a href="#home" class="nav-logo" @click.prevent="">
+    <a href="#home" class="nav-logo" @click.prevent="scrollToSection('home')">
       <img :src="whiteLogo" alt="logo" />
     </a>
 
     <ul :class="{ 'nav-list': true, 'open-menu': showMenu }">
-      <a href="#home" class="nav-logo2" @click.prevent="">
+      <a href="#home" class="nav-logo2" @click.prevent="scrollToSection('home')">
         <img :src="whiteLogo" alt="logo" />
       </a>
       <li v-for="nav in navLinks" :key="nav.id">

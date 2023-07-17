@@ -10,11 +10,13 @@
     <Subscribe></Subscribe>
     <Contact></Contact>
   </main>
-  <footer></footer>
+  <footer>
+    <Footer></Footer>
+  </footer>
 </template>
 
 <script>
-import { NavBar, Home, About, Releases, Videos, Subscribe, Contact } from './components'
+import { NavBar, Home, About, Releases, Videos, Subscribe, Contact, Footer } from './components'
 
 export default {
   name: "app",
@@ -25,7 +27,8 @@ export default {
     Releases,
     Videos,
     Subscribe,
-    Contact
+    Contact,
+    Footer
   }
 };
 </script>
