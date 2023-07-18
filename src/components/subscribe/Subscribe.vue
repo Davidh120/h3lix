@@ -8,13 +8,13 @@
             Get Ready for Interstellar Tunes: <br />
             Subscribe to our Cosmic Mail List
           </h3>
-          <form action="" class="subscribe-form">
+          <form action="" class="subscribe-form" @submit.prevent="sendContact">
             <div class="subscribe-form-box">
               <input
                 type="text"
                 name="name"
                 class="subscribe-form-input"
-                v-model="name"
+                v-model="contact.name"
                 required
               />
               <label class="subscribe-form-tag"> Name </label>
@@ -24,7 +24,7 @@
                 type="email"
                 name="email"
                 class="subscribe-form-input"
-                v-model="email"
+                v-model="contact.email"
                 required
               />
               <label class="subscribe-form-tag"> Email </label>
@@ -50,11 +50,44 @@ export default {
   name: "subscribe",
   data: function () {
     return {
-      name: "",
-      email: "",
+      contact: {
+        name: "",
+        email: "",
+      },
+      apiKey: "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",
       h3lix3,
       policy,
     };
+  },
+  watch: {
+    "contact.name"(newVal) {
+      this.contact.name = newVal.charAt(0).toUpperCase() + newVal.slice(1).toLowerCase();
+    },
+    "contact.email"(newVal) {
+      this.contact.email = newVal.toLowerCase();
+    }
+  },
+  methods: {
+    sendContact() {
+      fetch("https://api.brevo.com/v3/contacts", {
+        method: "POST",
+        headers: {
+          "api-key": this.apiKey,
+          accept: "application/json",
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          email: this.contact.email,
+          attributes: {
+            FIRSTNAME: this.contact.name,
+          },
+          listIds: [2],
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data), this.contact.name = "", this.contact.email = "")
+        .catch((error) => console.error(error));
+    }
   },
 };
 </script>
