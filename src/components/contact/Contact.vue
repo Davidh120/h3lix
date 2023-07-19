@@ -23,13 +23,12 @@
         </div>
         <div class="contact-content">
           <h3 class="section-subtitle">Contact Form</h3>
-          <form action="" class="contact-form">
+          <form action="" ref="form" class="contact-form" @submit.prevent="sendEmail">
             <div class="contact-form-box">
               <input
                 type="text"
-                name="name"
+                name="user_name"
                 class="contact-form-input"
-                v-model="name"
                 required
               />
               <label class="contact-form-tag"> Name </label>
@@ -37,9 +36,8 @@
             <div class="contact-form-box">
               <input
                 type="email"
-                name="email"
+                name="user_email"
                 class="contact-form-input"
-                v-model="email"
                 required
               />
               <label class="contact-form-tag"> Email </label>
@@ -51,7 +49,6 @@
                 cols="30"
                 rows="8"
                 class="contact-form-input"
-                v-model="message"
                 placeholder="Message"
                 required
               ></textarea>
@@ -65,15 +62,25 @@
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+
 export default {
   name: "contact",
   data: function () {
     return {
-      name: "",
-      email: "",
-      message: ""
     };
   },
+  methods: {
+    sendEmail(){
+      emailjs.sendForm('service_ka02ngq', 'template_8ygkyiu', this.$refs.form, 'x3uPn3e7rnrV-eq2f')
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                this.$refs.form.reset()
+            }, (error) => {
+              console.log('FAILED...', error);
+            });
+    }
+  }
 };
 </script>
 
@@ -85,7 +92,7 @@ export default {
   justify-content: space-between;
   margin: 4rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     justify-content: center;
     flex-direction: column;
   }
@@ -131,9 +138,7 @@ export default {
 .contact-form-box {
   position: relative;
   width: 30rem;
-}
 
-.contact-form-box {
   label {
     position: relative;
     top: -2.7rem;
@@ -180,6 +185,10 @@ export default {
     background: transparent;
     width: 100%;
   }
+
+  @media (max-width: 992px) {
+    width: 100%;
+  }
 }
 
 .button {
@@ -200,9 +209,6 @@ export default {
 
   .contact-content {
     padding: 1rem;
-  }
-  .contact-form-box {
-    width: 100%;
   }
 }
 </style>

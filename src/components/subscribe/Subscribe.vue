@@ -46,6 +46,7 @@
 
 <script>
 import { h3lix3, policy } from "../../assets";
+
 export default {
   name: "subscribe",
   data: function () {
@@ -54,7 +55,7 @@ export default {
         name: "",
         email: "",
       },
-      apiKey: "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",
+      // apiKey: process.env.API_KEY,
       h3lix3,
       policy,
     };
