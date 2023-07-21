@@ -50,9 +50,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
-      - name: Check API key value test
-        run: echo "$VITE_API_KEY"
-        
       - name: Testing Secrets
         run: |
           if [ "$VITE_API_KEY" = "${{ secrets.VITE_API_KEY }}" ]; then
