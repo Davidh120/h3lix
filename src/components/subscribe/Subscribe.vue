@@ -55,10 +55,14 @@ export default {
         name: "",
         email: "",
       },
-      // apiKey: process.env.API_KEY,
       h3lix3,
       policy,
     };
+  },
+  computed: {
+    apiKey() {
+      return import.meta.env.VITE_API_KEY;
+    },
   },
   watch: {
     "contact.name"(newVal) {
