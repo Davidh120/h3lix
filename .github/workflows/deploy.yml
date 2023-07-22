@@ -65,4 +65,4 @@ jobs:
           token: ${{ github.token }}
           artifact_name: Production files
         env:
-          VITE_API_KEY: ${{ env.VITE_API_KEY }}
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
