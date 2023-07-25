@@ -21,9 +21,6 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-
-      - name: Set API Key
-        run: echo "VITE_API_KEY=${{ secrets.VITE_API_KEY }}" >> .env.production
         
       - name: Build project
         run: npm run build
@@ -38,6 +35,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
 
+    #Gey apikey
+    env:
+      VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
       pages: write      # to deploy to Pages
@@ -49,9 +50,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
+      - name: Testing Secrets
+        run: |
+          if [ "$VITE_API_KEY" = "${{ secrets.VITE_API_KEY }}" ]; then
+            echo "The API key matches the secret."
+          else
+            echo "ERR! The API key does not match the secret."
+            exit 1
+          fi
 
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v2.0.3
         with:
           token: ${{ github.token }}
           artifact_name: Production files
+        env:
+          VITE_API_KEY: ${{ env.VITE_API_KEY }}
