@@ -3,9 +3,6 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/h3lix/',
+  base: '/',
   plugins: [vue()],
-  define: {
-    'process.env': {},
-  },
 })
