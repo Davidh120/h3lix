@@ -17,6 +17,8 @@
 
 <script>
 import { NavBar, Home, About, Releases, Videos, Subscribe, Contact, Footer } from './components'
+import { Scroll } from './components/Scroll'
+import { onMounted } from 'vue';
 
 export default {
   name: "app",
@@ -29,6 +31,11 @@ export default {
     Subscribe,
     Contact,
     Footer
+  },
+  setup() {
+    onMounted(() => {
+      Scroll();
+    });
   }
 };
 </script>
