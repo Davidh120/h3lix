@@ -6,6 +6,7 @@ import Videos from './videos/Videos.vue'
 import Subscribe from './subscribe/Subscribe.vue'
 import Contact  from './contact/Contact.vue'
 import Footer  from './footer/Footer.vue'
+import LpReleases from './lp_releases/LpReleases.vue'
 
 export{
     NavBar,
@@ -15,5 +16,6 @@ export{
     Videos,
     Subscribe,
     Contact,
-    Footer
+    Footer,
+    LpReleases,
 }

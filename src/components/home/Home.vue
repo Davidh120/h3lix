@@ -103,6 +103,7 @@ export default {
   position: absolute;
   z-index: 10;
   font-size: 10rem;
+  font-family: $h3lix-font;
 }
 
 .home-social {

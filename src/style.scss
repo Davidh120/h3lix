@@ -16,7 +16,7 @@ $container-color: #adacac;
 $secondary-color: #993bd9;
 
 /*font & typography */
-$title-font: "ZilapOrion", sans-serif;
+$h3lix-font: "ZilapOrion", sans-serif;
 $body-font: "Montserrat", monospace;
 
 $big-font-size: 3.5rem;
@@ -89,7 +89,6 @@ textarea {
 }
 
 h1 {
-  font-family: $title-font;
   color: $title-color;
 }
 
@@ -183,11 +182,7 @@ img {
   color: #000000;
   padding: 1rem 2rem;
   background-color: #ffffff;
-  border-radius: 2rem;
-  -webkit-border-radius: 2rem;
-  -moz-border-radius: 2rem;
-  -ms-border-radius: 2rem;
-  -o-border-radius: 2rem;
+  border-radius: 0.8rem;
   font-weight: map-get($font-weights, $key: medium);
   transition: 0.3s;
   -webkit-transition: 0.3s;
