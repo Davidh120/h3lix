@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <NavBar></NavBar>
+    <NavBar page></NavBar>
   </header>
   <main>
     <LpReleases

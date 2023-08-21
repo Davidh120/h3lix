@@ -1,6 +1,9 @@
 <template>
   <nav :class="['navBar', scrolled ? 'bg-nav' : 'bg-non-nav']">
-    <a href="#home" class="nav-logo" @click.prevent="scrollToSection('home')">
+    <router-link v-if="page" to="/" class="nav-logo" @click.prevent="scrollToSection('home')">
+      <img :src="whiteLogo" alt="logo" />
+    </router-link>
+    <a v-else href="#home" class="nav-logo" @click.prevent="scrollToSection('home')">
       <img :src="whiteLogo" alt="logo" />
     </a>
 
@@ -9,7 +12,8 @@
         <img :src="whiteLogo" alt="logo" />
       </a>
       <li v-for="nav in navLinks" :key="nav.id">
-        <a :href="'#' + nav.id" class="nav-link" @click.prevent="scrollToSection(nav.id), showMenu = !showMenu"><i :class="nav.icon "></i>{{ nav.title }}</a>
+        <router-link v-if="page" to="/" class="nav-link" @click.prevent="scrollToSection(nav.id), showMenu = !showMenu"><i :class="nav.icon "></i>{{ nav.title }}</router-link>
+        <a v-else :href="'#' + nav.id" class="nav-link" @click.prevent="scrollToSection(nav.id), showMenu = !showMenu"><i :class="nav.icon "></i>{{ nav.title }}</a>
       </li>
     </ul>
 
@@ -37,6 +41,9 @@ export default {
       showMenu: false,
       scrolled: false
     };
+  },
+  props: {
+    page: Boolean,
   },
   mounted(){
     const handleScroll = () => {

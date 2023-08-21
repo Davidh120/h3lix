@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     sendContact() {
-      const VITE_API_KEY = import.meta.PROD.VITE_API_KEY;
+      const VITE_API_KEY = import.meta.env.VITE_API_KEY;
 
       fetch("https://api.brevo.com/v3/contacts", {
         method: "POST",
