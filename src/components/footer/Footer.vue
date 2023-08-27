@@ -57,8 +57,8 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1d1a1a;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 7px 29px 0px;
+  background: #00040fc1;
+  box-shadow: rgba(255, 255, 255, 0.241) 0px 7px 29px 0px;
   padding: 0 2rem;
 
   .footer-logo {
