@@ -20,6 +20,7 @@
         </div>
       </div>
     </div>
+    <div class="diamond-blur"></div>
   </section>
 </template>
 
@@ -112,6 +113,22 @@ export default {
         }
       }
     }
+  }
+
+  .diamond-blur {
+    width: 30rem;
+    height: 30rem;
+    background: linear-gradient(
+      0deg,
+      rgba(61, 24, 136, 0.405) 0%,
+      rgb(79, 0, 132) 100%
+    );
+    filter: blur(120px);
+    position: fixed;
+    right: -16%;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: -10;
   }
 }
 </style>
