@@ -55,7 +55,7 @@ export const releases = [
         id: 1,
         image: likethis,
         name: "H3LIX - Like This",
-        link: "https://www.youtube.com/watch?v=qlkD_ug27o4&t=253s&ab_channel=H3LIXMUSIC"
+        link: "https://open.spotify.com/intl-es/track/5n6sRNSqwGMfPY8uOGTcVC?si=231227b4e0fa42d2"
     },
     {
         id: 2,

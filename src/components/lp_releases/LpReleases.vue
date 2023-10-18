@@ -6,7 +6,7 @@
           <h1 class="title">{{ name }}</h1>
           <div class="presave-content">
             <p class="message">{{ msg }}</p>
-            <a :href="link" class="button button-flex">Pre Save</a>
+            <a :href="releases[image].link" target="_blank" class="button button-flex">{{btnName}}</a>
           </div>
         </div>
         <div class="image">

@@ -5,9 +5,9 @@
   <main>
     <LpReleases
       name="Like This"
-      msg="🎶 Be a part of the exclusive premiere! Pre-save now. 🎵🔥 #H3LIX"
+      msg="🎶 Be a part of the exclusive premiere! 🎵🔥 #H3LIX"
       link="/"
-      btnName="Pre Save"
+      btnName="Listen Now"
       image="0"
     ></LpReleases>
     <Subscribe></Subscribe>
