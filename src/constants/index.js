@@ -74,7 +74,7 @@ export const releases = [
 export const videos = [
     {
         id: 1,
-        iframe: '<iframe width="560" height="315" src="https://www.youtube.com/embed/qlkD_ug27o4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"allowfullscreen></iframe>'
+        iframe: '<iframe width="560" height="315" src="https://www.youtube.com/embed/8VQ5qZ5hVDU?si=ZdRfwfRe4r88ZYHY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
     },
     {
         id: 2,

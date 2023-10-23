@@ -3,31 +3,17 @@
     <h2 class="section-title">VIDEOS</h2>
     <div class="videos-container container">
       <div class="content grid">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/qlkD_ug27o4"
-          title="YouTube video player"
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8VQ5qZ5hVDU?si=ZdRfwfRe4r88ZYHY"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/i6NY7p_SoqU" title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/i6NY7p_SoqU"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+          allowfullscreen></iframe>
       </div>
-      <a
-        href="https://www.youtube.com/@h3lixmusic"
-        target="_blank"
-        class="button subscribe-btn"
-        ><i class="uil uil-youtube button-icon"></i>Watch more</a
-      >
+      <a href="https://www.youtube.com/@h3lixmusic" target="_blank" class="button subscribe-btn"><i
+          class="uil uil-youtube button-icon"></i>Watch more</a>
     </div>
   </section>
 </template>
